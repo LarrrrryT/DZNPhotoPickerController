@@ -1,14 +1,63 @@
 PODS:
-  - DZNPhotoPickerController/Editor (1.6.0)
+  - AFNetworking (2.4.1):
+    - AFNetworking/NSURLConnection (= 2.4.1)
+    - AFNetworking/NSURLSession (= 2.4.1)
+    - AFNetworking/Reachability (= 2.4.1)
+    - AFNetworking/Security (= 2.4.1)
+    - AFNetworking/Serialization (= 2.4.1)
+    - AFNetworking/UIKit (= 2.4.1)
+  - AFNetworking/NSURLConnection (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - DZNEmptyDataSet (1.3.3)
+  - DZNPhotoPickerController (1.6.1):
+    - DZNPhotoPickerController/Core (= 1.6.1)
+  - DZNPhotoPickerController/Core (1.6.1):
+    - DZNEmptyDataSet (= 1.3.3)
+    - DZNPhotoPickerController/Editor
+    - DZNPhotoPickerController/Services
+    - MBProgressHUD (= 0.9)
+    - SDWebImage (= 3.7)
+  - DZNPhotoPickerController/Editor (1.6.1)
+  - DZNPhotoPickerController/Services (1.6.1):
+    - AFNetworking (= 2.4.1)
+    - GROAuth2SessionManager (= 0.2.3)
+  - GROAuth2SessionManager (0.2.3):
+    - AFNetworking (~> 2.4.1)
+  - MBProgressHUD (0.9)
+  - SDWebImage (3.7.0):
+    - SDWebImage/Core (= 3.7.0)
+  - SDWebImage/Core (3.7.0)
 
 DEPENDENCIES:
-  - DZNPhotoPickerController/Editor (from `../../`)
+  - DZNPhotoPickerController (from `https://github.com/LarrrrryT/DZNPhotoPickerController.git`)
 
 EXTERNAL SOURCES:
   DZNPhotoPickerController:
-    :path: ../../
+    :git: https://github.com/LarrrrryT/DZNPhotoPickerController.git
+
+CHECKOUT OPTIONS:
+  DZNPhotoPickerController:
+    :commit: fa1f83035d4acb6c0b8f50f6a47d8f5e2d1aafe3
+    :git: https://github.com/LarrrrryT/DZNPhotoPickerController.git
 
 SPEC CHECKSUMS:
-  DZNPhotoPickerController: 4e4ee07e6d474594e6bdd847840b0666cd2c3d53
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  DZNEmptyDataSet: aa20600aff620af3d78edbff4bc47282972e815f
+  DZNPhotoPickerController: 1ad13beae2c2c221af6295aac8cb11d0a5cf2b51
+  GROAuth2SessionManager: d40e386b9e865806687b4b818964efb3ac6db952
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  SDWebImage: 791cb0f588046cb0bb7802ae8ae8f5462947b773
 
 COCOAPODS: 0.35.0

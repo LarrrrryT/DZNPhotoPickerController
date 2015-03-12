@@ -31,8 +31,7 @@ static CGFloat kDZNPhotoDisplayMinimumBarHeight = 44.0;
                                             UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate,
                                             DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
-@property (nonatomic, readonly) UISearchBar *searchBar;
-@property (nonatomic, readonly) UISearchDisplayController *searchController;
+@property (nonatomic) UISearchBar *searchBar;
 @property (nonatomic, readonly) UIButton *loadButton;
 @property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
 
@@ -49,7 +48,6 @@ static CGFloat kDZNPhotoDisplayMinimumBarHeight = 44.0;
 
 @implementation DZNPhotoDisplayViewController
 @synthesize searchBar = _searchBar;
-@synthesize searchController = _searchController;
 @synthesize loadButton = _loadButton;
 @synthesize activityIndicator = _activityIndicator;
 @synthesize searchTimer = _searchTimer;
@@ -159,11 +157,11 @@ Returns the custom collection view layout.
     if (!_searchController)
     {
         _searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
-        _searchController.searchResultsTableView.backgroundColor = [UIColor whiteColor];
+        _searchController.searchResultsTableView.backgroundColor = [UIColor redColor];
         _searchController.searchResultsTableView.tableHeaderView = [UIView new];
         _searchController.searchResultsTableView.tableFooterView = [UIView new];
         _searchController.searchResultsTableView.backgroundView = [UIView new];
-        _searchController.searchResultsTableView.backgroundView.backgroundColor = [UIColor whiteColor];
+        _searchController.searchResultsTableView.backgroundView.backgroundColor = [UIColor redColor];
         _searchController.searchResultsTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeNone;
         _searchController.searchResultsDataSource = self;
         _searchController.searchResultsDelegate = self;
@@ -172,6 +170,10 @@ Returns the custom collection view layout.
         [_searchController setValue:@"" forKey:@"noResultsMessage"];
     }
     return _searchController;
+}
+
+- (void)setSearchBar:(UISearchBar *)searchBar {
+    _searchBar = searchBar;
 }
 
 /*

@@ -26,6 +26,8 @@
 /** YES if the controller started a request and loading content. */
 @property (nonatomic, readonly, getter = isLoading) BOOL loading;
 
+- (void)setSearchBar:(UISearchBar *)searchBar;
+
 /**
  Stops any loading HTTP request.
  */
