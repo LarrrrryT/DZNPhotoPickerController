@@ -157,6 +157,10 @@ static DZNPhotoPickerControllerCancellationBlock _cancellationBlock;
     
     DZNPhotoDisplayViewController *controller = [[DZNPhotoDisplayViewController alloc] init];
     
+    if(self.customizePhotoDisplayController) {
+        self.customizePhotoDisplayController(controller);
+    }
+    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStylePlain target:self action:@selector(cancelPicker:)];
         [controller.navigationItem setRightBarButtonItem:cancel];

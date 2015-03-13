@@ -172,15 +172,15 @@ Returns the custom collection view layout.
     return _searchController;
 }
 
-- (void)setSearchBar:(UISearchBar *)searchBar {
-    _searchBar = searchBar;
-}
-
 /*
  Returns the custom search bar.
  */
 - (UISearchBar *)searchBar
 {
+    if (self.customSearchBar) {
+        return self.customSearchBar();
+    }
+    
     if (!_searchBar)
     {
         _searchBar = [[UISearchBar alloc] initWithFrame:[self searchBarFrame]];
