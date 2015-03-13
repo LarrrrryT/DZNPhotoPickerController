@@ -42,22 +42,13 @@ PODS:
   - SDWebImage/Core (3.7.0)
 
 DEPENDENCIES:
-  - DZNPhotoPickerController (from `https://github.com/LarrrrryT/DZNPhotoPickerController.git`)
+  - DZNPhotoPickerController
   - Kiwi (~> 2.3)
-
-EXTERNAL SOURCES:
-  DZNPhotoPickerController:
-    :git: https://github.com/LarrrrryT/DZNPhotoPickerController.git
-
-CHECKOUT OPTIONS:
-  DZNPhotoPickerController:
-    :commit: fa1f83035d4acb6c0b8f50f6a47d8f5e2d1aafe3
-    :git: https://github.com/LarrrrryT/DZNPhotoPickerController.git
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   DZNEmptyDataSet: aa20600aff620af3d78edbff4bc47282972e815f
-  DZNPhotoPickerController: 1ad13beae2c2c221af6295aac8cb11d0a5cf2b51
+  DZNPhotoPickerController: b160709441243eeed87cd998d2b92da1f6d91840
   GROAuth2SessionManager: d40e386b9e865806687b4b818964efb3ac6db952
   Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8

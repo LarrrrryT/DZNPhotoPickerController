@@ -10,6 +10,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DZNPhotoEditorViewController.h"
+#import "DZNPhotoDisplayViewController.h"
 
 @protocol DZNPhotoPickerControllerDelegate;
 

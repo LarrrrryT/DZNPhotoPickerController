@@ -34,7 +34,7 @@ static CGFloat kDZNPhotoDisplayMinimumBarHeight = 44.0;
 @property (nonatomic) UISearchBar *searchBar;
 @property (nonatomic, readonly) UIButton *loadButton;
 @property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
-
+@property (nonatomic, strong) UISearchDisplayController *searchController;
 @property (nonatomic, strong) NSMutableArray *metadataList;
 @property (nonatomic, strong) NSMutableArray *tagList;
 @property (nonatomic, strong) NSArray *segmentedControlTitles;
@@ -51,6 +51,7 @@ static CGFloat kDZNPhotoDisplayMinimumBarHeight = 44.0;
 @synthesize loadButton = _loadButton;
 @synthesize activityIndicator = _activityIndicator;
 @synthesize searchTimer = _searchTimer;
+@synthesize searchController = _searchController;
 
 - (instancetype)init
 {

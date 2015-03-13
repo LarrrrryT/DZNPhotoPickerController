@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
 
-pod 'DZNPhotoPickerController', :git => 'https://github.com/LarrrrryT/DZNPhotoPickerController.git'
+pod 'DZNPhotoPickerController'
 
 target :Tests, :exclusive => true do
     pod 'Kiwi', '~> 2.3'
