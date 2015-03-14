@@ -26,11 +26,21 @@
 /** YES if the controller started a request and loading content. */
 @property (nonatomic, readonly, getter = isLoading) BOOL loading;
 
-@property (nonatomic, copy) UISearchBar * (^customSearchBar)();
+@property (nonatomic, strong, readonly) UISearchBar *searchBar;
+
+@property (nonatomic, copy) UISearchBar * (^customSearchBar)(DZNPhotoDisplayViewController *,CGRect);
+@property (nonatomic, copy) UISearchDisplayController * (^customSearchController)(DZNPhotoDisplayViewController *);
+@property (nonatomic, copy) void (^loadingCompleted)(DZNPhotoDisplayViewController *);
+@property (nonatomic, copy) void (^loadingStarted)(DZNPhotoDisplayViewController *);
+@property (nonatomic, copy) UIActivityIndicatorView * (^customActivitySpinner)(DZNPhotoDisplayViewController *);
+@property (nonatomic, copy) NSAttributedString * (^descriptionTextForEmptyState)(DZNPhotoDisplayViewController *);
+@property (nonatomic, copy) NSAttributedString * (^titleForEmptyDataState)(DZNPhotoDisplayViewController *);
 
 /**
  Stops any loading HTTP request.
  */
 - (void)stopLoadingRequest;
+- (void)resetPhotos;
+- (void)shouldSearchPhotos:(NSString *)keyword;
 
 @end
